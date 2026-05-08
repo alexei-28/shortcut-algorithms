@@ -156,3 +156,25 @@ head.next.next.value;
 Source: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task3Test.java)
+
+
+#### Задание 4: Подсчёт чётных чисел
+Напишите функцию, которая подсчитывает количество чётных чисел в массиве.
+Примеры:
+```
+Вход: arr = [1, 2, 3, 4, 5, 6]
+Выход: 3 (числа 2, 4, 6)
+
+Вход: arr = [1, 3, 5, 7]
+Выход: 0
+```
+#### Требования:
+- Временная сложность: O(n)
+- Пространственная сложность: O(1)
+
+Подсказка: Используйте операцию % (остаток от деления) для проверки чётности: num % 2 == 0.
+Решение:
+
+Source: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4.java)
+
+Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4Test.java)

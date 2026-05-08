@@ -44,3 +44,28 @@ application {
     // Define the main class for the application.
     mainClass = "com.gmail.alexei28.shortcutalgorithms.App"
 }
+
+
+tasks.test {
+    testLogging {
+        events("passed", "skipped", "failed")
+
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+
+        showExceptions = true
+        showCauses = true
+        showStackTraces = true
+
+        showStandardStreams = true
+    }
+
+    afterSuite(KotlinClosure2<TestDescriptor, TestResult, Unit>({ desc, result ->
+        if (desc.parent == null) {
+            println(
+                "\nResults: ${result.successfulTestCount} passed, " +
+                        "${result.failedTestCount} failed, " +
+                        "${result.skippedTestCount} skipped"
+            )
+        }
+    }))
+}
