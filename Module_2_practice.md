@@ -229,3 +229,27 @@ Tests: [Task5Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Source: [Task6.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6.java)
 
 Tests: [Task6Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6Test.java)
+
+#### Задание 7: Удалить k-й элемент односвязного списка
+Задача замечена на собеседованиях в ВК.
+
+Добавьте в класс LinkedList из лекции метод delete_at_index, который удаляет узел по указанному индексу k.
+
+Гарантируется, что указанный индекс существует в списке.
+Пример:
+```
+Исходный список: 1 → 2 → 3 → 4 → 5
+Вызов: delete_at_index(2) (удалить узел с индексом 2)
+Результат: 1 → 2 → 4 → 5
+```
+Требования:
+Временная сложность: O(n)
+Пространственная сложность: O(1)
+
+Подсказка: Пройдите по списку до узла перед удаляемым индексом, сохраните его next как next.next.
+
+Решение:
+
+Source: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7.java)
+
+Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7Test.java)
