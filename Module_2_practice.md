@@ -178,3 +178,27 @@ Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Source: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4.java)
 
 Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4Test.java)
+
+#### Задание 5: Разворот строки
+Напишите функцию, которая разворачивает строку (меняет символы местами: первый с последним, второй с предпоследним и т. д.). 
+Строка передаётся как массив символов, который нужно изменить in-place.
+
+Примеры:
+```
+Вход: s = ['h', 'e', 'l', 'l', 'o']
+Выход (изменённый s): ['o', 'l', 'l', 'e', 'h']
+
+Вход: s = ['H', 'a', 'n', 'n', 'a', 'h']
+Выход (изменённый s): ['h', 'a', 'n', 'n', 'a', 'H']
+```
+#### Требования:
+- Временная сложность: O(n)
+- Пространственная сложность: O(1) — разворот должен быть in-place
+- Не используйте встроенные методы разворота
+
+Подсказка: Используйте два указателя: left (начало) и right (конец). Меняйте местами символы и сдвигайте указатели к центру.
+Решение:
+
+Source: [Task5.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5.java)
+
+Tests: [Task5Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5Test.java)
