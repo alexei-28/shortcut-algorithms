@@ -253,3 +253,29 @@ Tests: [Task6Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Source: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7.java)
 
 Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7Test.java)
+
+
+#### Задание 8: Поиск по значению в связном списке
+Добавьте в класс LinkedList из лекции метод find_index, который ищет узел с указанным значением и возвращает его индекс. 
+Если значение не найдено, верните -1.
+Пример:
+```
+Список: 1 → 2 → 3 → 4 → 5
+Вызов: find_index(3)
+Выход: 2 (индекс узла со значением 3)
+
+Список: 1 → 2 → 3 → 4 → 5
+Вызов: find_index(6)
+Выход: -1 (значение не найдено)
+```
+Требования:
+- Временная сложность: O(n)
+- Пространственная сложность: O(n)
+
+Подсказка Пройдите по списку от начала, отслеживая индекс текущего узла. Сравнивайте значение каждого узла с искомым.
+
+Решение:
+
+Source: [Task8.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task8.java)
+
+Tests: [Task8Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task8Test.java)
