@@ -153,7 +153,7 @@ head.next.next.value;
 
 Решение:
 
-Source: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task3.java)
+Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task3Test.java)
 
@@ -175,7 +175,7 @@ Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Подсказка: Используйте операцию % (остаток от деления) для проверки чётности: num % 2 == 0.
 Решение:
 
-Source: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4.java)
+Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4.java)
 
 Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task4Test.java)
 
@@ -199,7 +199,7 @@ Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Подсказка: Используйте два указателя: left (начало) и right (конец). Меняйте местами символы и сдвигайте указатели к центру.
 Решение:
 
-Source: [Task5.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5.java)
+Solution: [Task5.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5.java)
 
 Tests: [Task5Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5Test.java)
 
@@ -226,7 +226,7 @@ Tests: [Task5Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Подсказка: Используйте StringBuilder в Java и strings.
 Решение:
 
-Source: [Task6.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6.java)
+Solution: [Task6.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6.java)
 
 Tests: [Task6Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6Test.java)
 
@@ -250,7 +250,7 @@ Tests: [Task6Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 
 Решение:
 
-Source: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7.java)
+Solution: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7.java)
 
 Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task7Test.java)
 
@@ -276,6 +276,35 @@ Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 
 Решение:
 
-Source: [Task8.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task8.java)
+Solution: [Task8.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task8.java)
 
 Tests: [Task8Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task8Test.java)
+
+---
+### Уровень 3: Задачи
+Простые задачи на строки и массивы, которые могут встретиться на собеседованиях.
+
+#### Задание 9: Length of Last Word [Easy]
+
+Источник: https://leetcode.com/problems/length-of-last-word/description/
+
+Найдите длину последнего слова в строке. Слово — это максимальная подстрока, состоящая только из символов, отличных от пробела.
+```
+Вход: s = "Hello World", Выход: 5 (слово "World")
+Вход: s = "   fly me   to   the moon  ", Выход: 4 (слово "moon")
+Вход: s = "luffy is still joyboy", Выход: 6 (слово "joyboy")
+Выход: -1 (значение не найдено)
+```
+Требования:
+- Сложность: O(n)
+- Память: O(1)
+
+
+Подсказка: Идите с конца строки и пропустите все пробелы. 
+Когда найдете первый непробельный символ, начинайте считать длину слова до следующего пробела или начала строки.
+
+Решение:
+
+Solution: [Task9.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task9.java)
+
+Tests: [Task9Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task9Test.java)
