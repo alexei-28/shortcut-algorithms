@@ -202,3 +202,30 @@ Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Source: [Task5.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5.java)
 
 Tests: [Task5Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task5Test.java)
+
+
+
+#### Задание 6: Объединение строк
+Напишите функцию, которая объединяет все строки из списка в одну строку.
+
+Примеры:
+```
+Вход: str_list = ["hello", " ", "world"]
+Выход: "hello world"
+
+Вход: str_list = ["a", "b", "c"]
+Выход: "abc"
+
+Вход: str_list = []
+Выход: ""
+```
+#### Требования:
+- Временная сложность: O(n), где n — суммарная длина всех строк
+- Пространственная сложность: O(n) — для результата
+
+Подсказка: Используйте StringBuilder в Java и strings.
+Решение:
+
+Source: [Task6.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6.java)
+
+Tests: [Task6Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task6Test.java)
