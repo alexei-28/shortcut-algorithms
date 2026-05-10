@@ -1,4 +1,4 @@
-package com.gmail.alexei28.shortcutalgorithms.module2;
+package com.gmail.alexei28.shortcut.algorithms.module2;
 
 /*
     https://shortcut.education/page119537466.html#!/tab/1948616871-2

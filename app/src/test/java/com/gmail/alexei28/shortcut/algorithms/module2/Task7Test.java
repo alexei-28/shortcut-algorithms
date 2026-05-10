@@ -1,20 +1,22 @@
-package com.gmail.alexei28.shortcutalgorithms.module2;
+package com.gmail.alexei28.shortcut.algorithms.module2;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Task8Test {
-    private Task8.LinkedList linkedList;
+class Task7Test {
+    private Task7.LinkedList linkedList;
 
     @BeforeEach
     void setUp() {
-        linkedList = new Task8.LinkedList();
+        linkedList = new Task7.LinkedList();
     }
 
     @Test
@@ -28,6 +30,7 @@ class Task8Test {
                 .containsExactly("A", "B");
     }
 
+    @Timeout(value = 10, unit = TimeUnit.SECONDS)
     @Test
     @DisplayName("Should delete the head element (index 0)")
     void shouldDeleteHead() {
@@ -55,7 +58,7 @@ class Task8Test {
         // act
         linkedList.deleteAtIndex(1);
 
-        // assert
+        // assert 
         List<String> actualList = toList(linkedList);
         assertThat(actualList)
                 .containsExactly("A", "C")
@@ -88,84 +91,16 @@ class Task8Test {
         assertThat(toList(linkedList)).containsExactly("A");
     }
 
-
-    @Test
-    @DisplayName("Should not find index in empty list")
-    void shouldNotFindIndexInEmptyList() {
-        // act
-        int actualIndex = linkedList.findIndex("A");
-
-        // assert
-        assertThat(actualIndex).isEqualTo(-1);
-    }
-
-    @Test
-    @DisplayName("Should not find index of non exist element")
-    void shouldNotFindIndex() {
-        linkedList.append("A");
-        linkedList.append("B");
-        linkedList.append("C");
-
-        // act
-        int actualIndex = linkedList.findIndex("Z");
-
-        // assert
-        assertThat(actualIndex).isEqualTo(-1);
-    }
-
-
-    @Test
-    @DisplayName("Should find index of head element (index 0)")
-    void shouldFindHeadIndex() {
-        linkedList.append("A");
-        linkedList.append("B");
-        linkedList.append("C");
-
-        int actualIndex = linkedList.findIndex("A");
-
-        // assert
-        assertThat(actualIndex).isZero();
-    }
-
-    @Test
-    @DisplayName("Should find index of element in the middle")
-    void shouldFindMiddleElementIndex() {
-        // arrange
-        linkedList.append("A");
-        linkedList.append("B");
-        linkedList.append("C");
-
-        // act
-        int actualIndex = linkedList.findIndex("B");
-
-        // assert
-        assertThat(actualIndex).isEqualTo(1);
-    }
-
-    @Test
-    @DisplayName("Should find index of last element")
-    void shouldFindTailIndex() {
-        linkedList.append("A");
-        linkedList.append("B");
-        linkedList.append("C");
-
-        // act
-        int actualIndex = linkedList.findIndex("C");
-
-        // assert
-        assertThat(actualIndex).isEqualTo(2);
-    }
-
     /**
      * Helper method to convert the internal LinkedList state to a Java List
      * to facilitate AssertJ assertions.
      */
-    private List<String> toList(Task8.LinkedList linkedList) {
+    private List<String> toList(Task7.LinkedList linkedList) {
         List<String> result = new ArrayList<>();
         // Note: Using reflection or a getter would be needed if head is strictly private.
         // For this test, we assume we can traverse it via a helper within the same package.
         try {
-            var headField = Task8.LinkedList.class.getDeclaredField("head");
+            var headField = Task7.LinkedList.class.getDeclaredField("head");
             headField.setAccessible(true);
             Object current = headField.get(linkedList);
 

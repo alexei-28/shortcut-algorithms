@@ -1,4 +1,4 @@
-package com.gmail.alexei28.shortcutalgorithms.module2;
+package com.gmail.alexei28.shortcut.algorithms.module2;
 
 /*
     Задание 7: Удалить k-й элемент односвязного списка
