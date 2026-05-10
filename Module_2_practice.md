@@ -308,3 +308,27 @@ Tests: [Task8Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Solution: [Task9.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task9.java)
 
 Tests: [Task9Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task9Test.java)
+
+
+#### Задание 10: Longest Common Prefix [Easy]
+
+Источник: https://leetcode.com/problems/longest-common-prefix/description/
+
+Напишите функцию для поиска самого длинного общего префикса среди массива строк. Если общего префикса нет, верните пустую строку.
+```
+Вход: strs = ["flower","flow","flight"], Выход: "fl"
+Вход: strs = ["dog","racecar","car"], Выход: "" (нет общего префикса)
+Вход: strs = ["cir","car"], Выход: "c"
+```
+Требования:
+- Сложность: O(n·m), где n — количество строк, m — длина самой короткой строки
+- Память: O(1)
+
+Подсказка: Возьмите первую строку как образец префикса. 
+Сравнивайте её с каждой следующей строкой и укорачивайте префикс, пока он не станет общим для всех.
+
+Решение:
+
+Solution: [Task10.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task10.java)
+
+Tests: [Task10Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task10Test.java)
