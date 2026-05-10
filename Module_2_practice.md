@@ -351,3 +351,30 @@ Tests: [Task10Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorith
 Solution: [Task11.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task11.java)
 
 Tests: [Task11Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task11Test.java)
+
+#### Задание 12: Plus One [Easy]
+
+Источник: https://leetcode.com/problems/plus-one/
+
+Дано целое неотрицательное число, представленное в виде массива цифр digits, где каждая цифра находится на своей позиции 
+(самая значимая цифра — по индексу 0). Прибавьте к этому числу единицу. Измените массив digits in-place и верните его.
+
+Цифры хранятся так, что старшая цифра находится в начале списка, и каждая цифра в массиве является одной цифрой числа (0−9).
+
+Примеры:
+```
+Вход: digits = [1,2,3], Выход: [1,2,4] (123 + 1 = 124)
+Вход: digits = [4,3,2,1], Выход: [4,3,2,2] (4321 + 1 = 4322)
+Вход: digits = [9], Выход: [1,0] (9 + 1 = 10)
+Вход: digits = [9,9], Выход: [1,0,0] (99 + 1 = 100)
+```
+
+Требования:
+- Сложность: O(n)
+- Память: O(1)
+
+Решение:
+
+Solution: [Task12.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task12.java)
+
+Tests: [Task12Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task12Test.java)
