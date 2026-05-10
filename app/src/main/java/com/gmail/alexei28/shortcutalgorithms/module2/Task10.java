@@ -60,6 +60,6 @@ public class Task10 {
                 largerstIndex = currentIndex;
             }
         }
-        return largerstIndex == -1 ? "": firstString.substring(0, largerstIndex);
+        return firstString.substring(0, largerstIndex);
     }
 }

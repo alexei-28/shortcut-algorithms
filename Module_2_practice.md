@@ -332,3 +332,22 @@ Tests: [Task9Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithm
 Solution: [Task10.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task10.java)
 
 Tests: [Task10Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task10Test.java)
+
+#### Задание 11: Максимум и минимум [Easy]
+
+Найдите максимум и минимум в массиве за один проход.
+```
+Вход: [3, 7, 2, 9, 1, 5]
+Выход: max=9, min=1
+```
+Требования:
+- Сложность: O(n)
+- Проход по массиву: только один
+
+Подсказка: Инициализируйте max и min первым элементом. Затем обновляйте их при необходимости.
+
+Решение:
+
+Solution: [Task11.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task11.java)
+
+Tests: [Task11Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task11Test.java)
