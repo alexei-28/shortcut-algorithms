@@ -383,3 +383,29 @@ Tests: [Task11Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorith
 Solution: [Task12.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task12.java)
 
 Tests: [Task12Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task12Test.java)
+
+
+### Уровень 4: Связные списки
+Классические задачи на связные списки. Если почувствуете необходимость потренироваться еще, выбирайте категорию «linked lists» на leetcode.com.
+
+#### Задание 13: Reverse Linked List [Easy]
+Источник: https://leetcode.com/problems/reverse-linked-list/description/
+Разверните связный список (поменять порядок узлов на обратный).
+Пример:
+```
+Вход:  1 → 2 → 3 → 4 → 5
+Выход: 5 → 4 → 3 → 2 → 1
+```
+
+Требования:
+- Сложность: O(n)
+- Память: O(1) — разворот должен быть in-place
+
+Подсказка: Используйте три указателя: prev, current, next. 
+В каждой итерации сохраняйте next, меняйте ссылку current.next на prev, и сдвигайте указатели вперед.
+
+Решение:
+
+Solution: [Task13.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task13.java)
+
+Tests: [Task13Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task13Test.java)
