@@ -29,8 +29,13 @@ class Task12Test {
         return Stream.of(
                 arguments(new int[]{1, 2, 3}, new int[]{1, 2, 4}),
                 arguments(new int[]{4, 3, 2, 1}, new int[]{4, 3, 2, 2}),
+                arguments(new int[]{5, 5, 5}, new int[]{5, 5, 6}),
+                arguments(new int[]{9, 6, 9}, new int[]{9, 7, 0}),
                 arguments(new int[]{9}, new int[]{1, 0}),
-                arguments(new int[]{9, 9}, new int[]{1, 0, 0})
+                arguments(new int[]{9, 9}, new int[]{1, 0, 0}),
+                arguments(new int[]{9, 9, 9}, new int[]{1, 0, 0, 0}),
+                arguments(new int[]{9, 9, 9, 9, 9}, new int[]{1, 0, 0, 0, 0, 0})
+
         );
     }
 

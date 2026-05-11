@@ -373,7 +373,12 @@ Tests: [Task11Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorith
 - Сложность: O(n)
 - Память: O(1)
 
+Подсказка: Идите с конца массива к началу. Если цифра меньше 9, просто увеличьте её на 1 и верните результат. 
+Если цифра равна 9, замените её на 0 и переходите к следующей цифре слева.
+
 Решение:
+
+Память: Обычно O(1), но при создании нового массива для случая 99...9 становится O(n).
 
 Solution: [Task12.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task12.java)
 
