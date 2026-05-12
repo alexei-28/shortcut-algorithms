@@ -10,10 +10,10 @@ class Task13Test {
     private final Task13 task = new Task13();
 
     @Test
-    @DisplayName("Разворот списка из 5 элементов")
+    @DisplayName("Разворот связанного списка из 5 элементов")
     void shouldReverseListWithFiveElements() {
-        // Создаем список: 1 -> 2 -> 3 -> 4 -> 5
-        ListNode head = createList(1, 2, 3, 4, 5);
+        // Создаем связанный список: 1 -> 2 -> 3 -> 4 -> 5
+        ListNode head = createLinkedList(1, 2, 3, 4, 5);
 
         ListNode actual = task.reverseList(head);
 
@@ -27,7 +27,7 @@ class Task13Test {
     }
 
     @Test
-    @DisplayName("Разворот списка из 1 элемента")
+    @DisplayName("Разворот связанного списка из 1 элемента")
     void shouldReturnSameNodeWhenListHasOneElement() {
         ListNode head = new ListNode(1);
 
@@ -39,7 +39,7 @@ class Task13Test {
     }
 
     @Test
-    @DisplayName("Передача null в качестве головы списка")
+    @DisplayName("Передача null в качестве головы связанного списка")
     void shouldReturnNullWhenHeadIsNull() {
         ListNode actual = task.reverseList(null);
 
@@ -47,9 +47,9 @@ class Task13Test {
     }
 
     @Test
-    @DisplayName("Проверка пустого списка (синоним null в ListNode)")
+    @DisplayName("Проверка пустого связанного списка (синоним null в ListNode)")
     void shouldReturnNullWhenEmptyList() {
-        // В данной реализации ListNode пустой список обычно представлен как null
+        // В данной реализации ListNode пустой связанный список обычно представлен как null
         ListNode head = null;
 
         ListNode actual = task.reverseList(head);
@@ -58,7 +58,7 @@ class Task13Test {
     }
 
     // Вспомогательный метод для удобного создания связанного списка
-    private ListNode createList(int... values) {
+    private ListNode createLinkedList(int... values) {
         if (values.length == 0) return null;
         ListNode head = new ListNode(values[0]);
         ListNode current = head;
