@@ -34,7 +34,7 @@ public class Task13 {
         }
         ListNode prev = null;
         ListNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             ListNode next = current.next;
             current.next = prev; // Меняем ссылку
 
@@ -42,7 +42,6 @@ public class Task13 {
             prev = current;
             current = next;
         }
-        current.next = prev;
-        return current;
+        return prev;
     }
 }
