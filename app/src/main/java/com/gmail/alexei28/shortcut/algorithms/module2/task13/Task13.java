@@ -23,11 +23,11 @@ package com.gmail.alexei28.shortcut.algorithms.module2.task13;
     Пространственная сложность: O(1)
      - Почему: Не создается никаких дополнительных структур данных (массивов, списков или стеков), размер которых рос бы вместе
        с входными данными.
-     - Используется всего три переменные-указателя (headToReverse, current, next), которые занимают фиксированный объем памяти независимо от того,
-       10 узлов в списке или 10 миллионов.
+     - Используется всего три переменные-указателя (headOfReverseList, current, next), которые занимают фиксированный
+       объем памяти независимо от того, 10 узлов в списке или 10 миллионов.
      - Важно:
-       headToReverse, current и next — это не новые списки и не копии данных. Это просто указатели (или ссылки), которые хранят адрес в памяти.
-       Когда пишем headToReverse = current, ты не создаем новый "ящик", мы просто переводим взгляд (указатель) с одного места на другое.
+       headOfReverseList, current и next — это не новые списки и не копии данных. Это просто указатели (или ссылки), которые хранят адрес в памяти.
+       Когда пишем headOfReverseList = current, ты не создаем новый "ящик", мы просто переводим взгляд (указатель) с одного места на другое.
        Сколько бы узлов ни было в списке (10 или 10 миллионов), нам всё равно нужно всего три "пальца", чтобы ими управлять.
        Т.е. Количество памяти фиксировано. Нам нужны только 3 переменные-ссылки, независимо от длины списка.
 */
@@ -37,16 +37,16 @@ public class Task13 {
         if (head == null) {
             return head;
         }
-        ListNode headToReverse = null;
+        ListNode headOfReverseList = null;
         ListNode current = head;
         while (current != null) {
             ListNode next = current.next;
-            current.next = headToReverse; // Меняем ссылку
+            current.next = headOfReverseList; // Меняем ссылку
 
             // Двигаем указатели
-            headToReverse = current;
+            headOfReverseList = current;
             current = next;
         }
-        return headToReverse;
+        return headOfReverseList;
     }
 }

@@ -406,6 +406,32 @@ Tests: [Task12Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorith
 
 Решение:
 
-Solution: [Task13.java](./app/src/main/java/com/gmail/alexei28/shortcutalgorithms/module2/Task13.java)
+Solution: [Task13.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/task13/Task13.java)
 
-Tests: [Task13Test.java](./app/src/test/java/com/gmail/alexei28/shortcutalgorithms/module2/Task13Test.java)
+Tests: [Task13Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/task13/Task13Test.java)
+
+
+#### Задание 14: Merge Two Sorted Lists [Easy]
+Источник: https://leetcode.com/problems/merge-two-sorted-lists/
+
+Задача замечена на собеседованиях в ВК.
+Объедините два отсортированных связных списка в один отсортированный.
+
+Пример:
+```
+Вход 1: 1 → 3 → 5
+Вход 2: 2 → 4 → 6
+Выход: 1 → 2 → 3 → 4 → 5 → 6
+```
+
+Требования:
+- Сложность: O(n + m), где n и m — длины списков
+- Память: O(1) (переиспользуйте существующие узлы)
+
+Подсказка: Используйте два указателя для обхода обоих списков. Сравнивайте значения и добавляйте меньший в результат.
+
+Решение:
+
+Solution: [Task14.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/task14/Task14.java)
+
+Tests: [Task14Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/task14/Task14Test.java)
