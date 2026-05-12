@@ -36,8 +36,9 @@ public class Task13 {
         ListNode current = head;
         while (current.next != null) {
             ListNode next = current.next;
-            current.next = prev;
+            current.next = prev; // Меняем ссылку
 
+            // Двигаем указатели
             prev = current;
             current = next;
         }
