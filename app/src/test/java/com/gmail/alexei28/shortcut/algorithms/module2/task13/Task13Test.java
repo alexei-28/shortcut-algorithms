@@ -15,15 +15,15 @@ class Task13Test {
         // Создаем список: 1 -> 2 -> 3 -> 4 -> 5
         ListNode head = createList(1, 2, 3, 4, 5);
 
-        ListNode result = task.reverseList(head);
+        ListNode actual = task.reverseList(head);
 
         // Проверяем значения: 5 -> 4 -> 3 -> 2 -> 1
-        assertThat(result.val).isEqualTo(5);
-        assertThat(result.next.val).isEqualTo(4);
-        assertThat(result.next.next.val).isEqualTo(3);
-        assertThat(result.next.next.next.val).isEqualTo(2);
-        assertThat(result.next.next.next.next.val).isEqualTo(1);
-        assertThat(result.next.next.next.next.next).isNull();
+        assertThat(actual.val).isEqualTo(5);
+        assertThat(actual.next.val).isEqualTo(4);
+        assertThat(actual.next.next.val).isEqualTo(3);
+        assertThat(actual.next.next.next.val).isEqualTo(2);
+        assertThat(actual.next.next.next.next.val).isEqualTo(1);
+        assertThat(actual.next.next.next.next.next).isNull();
     }
 
     @Test
@@ -31,19 +31,19 @@ class Task13Test {
     void shouldReturnSameNodeWhenListHasOneElement() {
         ListNode head = new ListNode(1);
 
-        ListNode result = task.reverseList(head);
+        ListNode actual = task.reverseList(head);
 
-        assertThat(result).isNotNull();
-        assertThat(result.val).isEqualTo(1);
-        assertThat(result.next).isNull();
+        assertThat(actual).isNotNull();
+        assertThat(actual.val).isEqualTo(1);
+        assertThat(actual.next).isNull();
     }
 
     @Test
     @DisplayName("Передача null в качестве головы списка")
     void shouldReturnNullWhenHeadIsNull() {
-        ListNode result = task.reverseList(null);
+        ListNode actual = task.reverseList(null);
 
-        assertThat(result).isNull();
+        assertThat(actual).isNull();
     }
 
     @Test
@@ -52,9 +52,9 @@ class Task13Test {
         // В данной реализации ListNode пустой список обычно представлен как null
         ListNode head = null;
 
-        ListNode result = task.reverseList(head);
+        ListNode actual = task.reverseList(head);
 
-        assertThat(result).isNull();
+        assertThat(actual).isNull();
     }
 
     // Вспомогательный метод для удобного создания связанного списка
