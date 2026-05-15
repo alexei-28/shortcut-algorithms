@@ -435,3 +435,44 @@ Tests: [Task13Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorit
 Solution: [Task14.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/task14/Task14.java)
 
 Tests: [Task14Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/task14/Task14Test.java)
+
+
+### Уровень 5: Продвинутый
+
+Эти задачи имеют повышенную сложность (Medium), но решаются с помощью базовых операций, изученных в этом модуле. 
+Рекомендуются для студентов, которые уверенно справляются с задачами уровней 1−4.
+
+#### Задание 15: Set Matrix Zeroes [Medium]
+Источник: https://leetcode.com/problems/set-matrix-zeroes/description/
+
+Дана mxn матрица. Если элемент равен 0, то установите всю его строку и столбец в 0. Сделайте это in-place.
+Примеры:
+Вход:
+```
+matrix = 
+[
+  [1,1,1],
+  [1,0,1],
+  [1,1,1]
+]
+```
+Выход:
+``` 
+[
+  [1,0,1],
+  [0,0,0],
+  [1,0,1]
+]
+```
+Требования:
+- Сложность: O(m·n)
+- Память: O(1) — in-place решение без использования дополнительной матрицы
+
+Подсказка: Используйте первую строку и первый столбец для хранения информации о том, нужно ли обнулить соответствующие строки/столбцы.
+Дополнительные переменные для отслеживания, нужна ли очистка самой первой строки/столбца.
+
+Решение:
+
+Solution: [Task15.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/Task15.java)
+
+Tests: [Task15Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/Task15Test.java)
