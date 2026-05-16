@@ -476,3 +476,33 @@ matrix =
 Solution: [Task15.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/Task15.java)
 
 Tests: [Task15Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/Task15Test.java)
+
+### Задание 16: String to Integer (atoi) [Medium]
+Источник: https://leetcode.com/problems/string-to-integer-atoi/description/
+
+Реализуйте функцию atoi, которая преобразует строку в 32-битное целое число со следующими правилами:
+1. Пропустите ведущие пробелы
+2. Проверьте знак (+ или -)
+3. Читайте цифры до первой нецифры
+4. Преобразуйте в число, учитывая переполнение 32-битного int (-2,147,483,648, 2,147,483,647)
+
+Примеры:
+```
+Вход: "42", Выход: 42
+Вход: "   -42", Выход: -42
+Вход: "4193 with words", Выход: 4193
+Вход: "words and 987", Выход: 0 (нет цифр в начале)
+Вход: "-91283472332", Выход: -2147483648 (переполнение)
+```
+Требования:
+- Сложность: O(n)
+- Память: O(1)
+
+Подсказка: Проходите по строке слева направо. 
+Следите за переполнением: перед умножением на 10 или добавлением цифры проверяйте, не выйдет ли результат за границы 32-битного int.
+
+Решение:
+
+Solution: [Task16.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/Task16.java)
+
+Tests: [Task16Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/Task16Test.java)
