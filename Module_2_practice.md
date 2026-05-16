@@ -506,3 +506,21 @@ Tests: [Task15Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorit
 Solution: [Task16.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module2/Task16.java)
 
 Tests: [Task16Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module2/Task16Test.java)
+
+### Задание 17: Remove Nth Node From End of List [Medium]
+Источник: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+Удалите n-й узел с конца связного списка. Верните голову списка.
+
+Пример:
+```
+Вход: 1 → 2 → 3 → 4 → 5, n = 2
+Выход: 1 → 2 → 3 → 5
+```
+
+Требования:
+- Сложность: O(n)
+- Память: O(1)
+
+Подсказка: Сначала пройдите по списку и найдите его длину.
+Затем вычислите, какой узел нужно удалить (length — n с начала), и удалите его одним вторым проходом.
