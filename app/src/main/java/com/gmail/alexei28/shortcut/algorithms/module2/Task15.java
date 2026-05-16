@@ -29,24 +29,62 @@ public class Task15 {
     public void setZeroes(int[][] matrix) {
         boolean isFirstRowZero = false;
         boolean isFirstColumnZero = false;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++ ) {
-                if (!isFirstRowZero && matrix[0][j] == 0) {
-                    isFirstRowZero = true;
-                }
-                if (!isFirstColumnZero && matrix[i][0] == 0) {
-                    isFirstColumnZero = true;
-                }
-                if (matrix[0][j] == 0) {
-                    matrix[i][j] = 0;
-                }
 
-                // if last row
-                if (isFirstRowZero && i == matrix.length - 1 && j > 0) {
-                    matrix[0][j - 1] = 0;
+        // обходим только первую строку и первую колонку
+        for (int row = 0; row < matrix.length; row++) {
+            int columnsCount = matrix[0].length;
+            if (row > 0) {
+                columnsCount = 1;
+            }
+            for (int col = 0; col < columnsCount; col++) {
+                if (row == 0 && matrix[row][col] == 0) {
+                    isFirstRowZero = true;
+                    if (col == 0) {
+                        isFirstColumnZero = true;
+                    }
+                    break;
+                }
+                if (row > 0 && matrix[row][col] == 0) {
+                    isFirstColumnZero = true;
+                    break;
+                }
+            }
+        }
+        // set 0 in first row and first column
+        for (int row = 0; row < matrix.length; row++) {
+            for (int col = 0; col < matrix[0].length; col++) {
+                if (matrix[row][col] == 0) {
+                    matrix[0][col] = 0;
+                    matrix[row][0] = 0;
                 }
             }
         }
 
+        // skip first row and first column
+        for (int row = 1; row < matrix.length; row++) {
+            for (int col = 1; col < matrix[0].length; col++) {
+                // если в первой строке этого столбца стоит 0, то текущему элементу присвой 0
+                if (matrix[0][col] == 0) {
+                    matrix[row][col] = 0;
+                }
+                // если в первом столбце этой строки стоит 0, то текущему элементу присвой 0
+                if (matrix[row][0] == 0) {
+                    matrix[row][col] = 0;
+                }
+            }
+        }
+        System.out.println("isFirstRowZero = " + isFirstRowZero + ", isFirstColumnZero = " + isFirstColumnZero);
+        if (isFirstRowZero) {
+            // обходим только первую строку и обнуляем ее
+            for (int col = 0; col < matrix[0].length; col++) {
+                matrix[0][col] = 0;
+            }
+        }
+        if (isFirstColumnZero) {
+            // обходим только первую колонку и обнуляем ее
+            for (int row = 0; row < matrix.length; row++) {
+                matrix[row][0] = 0;
+            }
+        }
     }
 }

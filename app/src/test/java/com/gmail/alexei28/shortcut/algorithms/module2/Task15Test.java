@@ -16,6 +16,28 @@ class Task15Test {
     }
 
     @Test
+    @DisplayName("Крайний случай: ноль в последней колонки матрицы 5x6")
+    void testLastColumnZero() {
+        int[][] matrix = {
+                {1, 1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1, 1},
+                {1, 1, 1, 1, 1, 0},
+                {1, 1, 1, 1, 1, 1}
+        };
+        int[][] expected = {
+                {1, 1, 1, 1, 1, 0},
+                {1, 1, 1, 1, 1, 0},
+                {1, 1, 1, 1, 1, 0},
+                {0, 0, 0, 0, 0, 0},
+                {1, 1, 1, 1, 1, 0}
+        };
+        solver.setZeroes(matrix);
+        assertThat(matrix)
+                .isDeepEqualTo(expected);
+    }
+
+    @Test
     @DisplayName("Базовый случай: ноль в центре матрицы 3x3")
     void testBasicCase() {
         int[][] matrix = {
