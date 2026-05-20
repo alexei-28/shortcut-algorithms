@@ -1,4 +1,4 @@
-package com.gmail.alexei28.shortcutalgorithms;
+package com.gmail.alexei28.shortcut.algorithms;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
