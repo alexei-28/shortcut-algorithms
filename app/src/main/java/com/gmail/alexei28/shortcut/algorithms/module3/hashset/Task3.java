@@ -1,8 +1,6 @@
-package com.gmail.alexei28.shortcut.algorithms.module3;
+package com.gmail.alexei28.shortcut.algorithms.module3.hashset;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 
 /*
     Задание 3: Intersection of Two Arrays [Easy]

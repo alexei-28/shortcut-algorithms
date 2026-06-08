@@ -1,8 +1,8 @@
-package com.gmail.alexei28.shortcut.algorithms.module3;
+package com.gmail.alexei28.shortcut.algorithms.module3.hashset;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ArrayIntersectionMoreTest {
+class Task3Test {
 
     private final Task3 solution = new Task3();
 
