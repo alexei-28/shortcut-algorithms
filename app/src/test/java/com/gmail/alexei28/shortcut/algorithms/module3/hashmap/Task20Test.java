@@ -92,3 +92,6 @@ class Task20Test {
         // Assert
         assertThat(result)
                 .hasSize(2)
+                .containsExactlyInAnyOrder(-2, -1);
+    }
+}
