@@ -396,3 +396,27 @@ Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 
 Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores).
+
+
+### 383. Ransom Note [Easy]
+
+Паттерн "Частотный анализ" (HashMap).
+
+Source: https://leetcode.com/problems/ransom-note/description/
+
+Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+
+Each letter in magazine can only be used once in ransomNote.
+
+Example 1:
+Input: ransomNote = "a", magazine = "b"
+Output: false
+
+Example 2:
+Input: ransomNote = "aa", magazine = "ab"
+Output: false
+
+Example 3:
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+
