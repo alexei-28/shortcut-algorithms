@@ -1,4 +1,4 @@
-package com.gmail.alexei28.shortcut.algorithms.module3;
+package com.gmail.alexei28.shortcut.algorithms.module3.hashmap;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
