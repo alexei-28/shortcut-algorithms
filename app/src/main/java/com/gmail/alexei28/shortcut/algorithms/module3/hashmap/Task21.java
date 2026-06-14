@@ -45,6 +45,9 @@ import java.util.*;
        O(N), где N — это количество символов в строке s (или общая длина всех слов плюс пробелы).
 
     2. Пространственная сложность (Space Complexity): O(N)
+
+    Comment:
+    Лучше хранить доп структуру типо Set
 */
 public class Task21 {
     public boolean wordPattern(String pattern, String s) {

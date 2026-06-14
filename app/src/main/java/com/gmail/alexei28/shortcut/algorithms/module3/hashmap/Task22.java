@@ -1,4 +1,4 @@
-package com.gmail.alexei28.shortcut.algorithms.module3;
+package com.gmail.alexei28.shortcut.algorithms.module3.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +37,9 @@ import java.util.Map;
     Решение:
     1. Временная сложность (Time Complexity): O(N * M) в худшем случае или O(N) в среднем.
     2. Пространственная сложность (Space Complexity): O(M)
+
+    Comment:
+    Лучше доп структура
 */
 public class Task22 {
     public boolean isIsomorphic(String s, String t) {

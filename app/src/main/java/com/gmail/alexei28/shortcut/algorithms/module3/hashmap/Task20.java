@@ -27,6 +27,9 @@ import java.util.*;
         сложность O(U * k) превращается в O(N^2).
     2. Пространственная сложность (Space Complexity)
        В худшем случае (U = N) общая пространственная сложность составляет O(N).
+
+    Comment:
+    Лучше приорити кью
 */
 public class Task20 {
     public int[] topKFrequent(int[] nums, int k) {

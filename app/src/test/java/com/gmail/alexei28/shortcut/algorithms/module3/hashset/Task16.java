@@ -1,6 +1,5 @@
 package com.gmail.alexei28.shortcut.algorithms.module3.hashset;
 
-import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -40,6 +39,9 @@ import java.util.Set;
 
     Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
     It does not matter what you leave beyond the returned k (hence they are underscores).
+
+    Comment:
+    Лучше через 2 указателя
 
  */
 public class Task16 {
