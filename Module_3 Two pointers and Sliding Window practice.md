@@ -61,3 +61,16 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 Solution: [Task2.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task2.java)
 
 Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task2Test.java)
+
+
+### 19. Remove Nth Node From End of List [Easy]
+
+Source: https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+
+Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+Решение:
+
+Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task3.java)
+
+Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task3Test.java)
