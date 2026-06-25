@@ -74,3 +74,17 @@ Given the head of a linked list, remove the nth node from the end of the list an
 Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task3Test.java)
+
+
+### Один указатель читает, другой пишет [Easy]
+Source: https://leetcode.com/problems/remove-element/
+
+Пример: Remove Element. Дан массив nums и значение val, удалите все вхождения val из массива in-place и верните новую длину.
+Не используйте дополнительный массив для изменения порядка элементов.
+
+
+Решение:
+
+Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task4.java)
+
+Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task4Test.java)
