@@ -88,3 +88,15 @@ Source: https://leetcode.com/problems/remove-element/
 Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task4.java)
 
 Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task4Test.java)
+
+
+
+###  Максимальная сумма подмассива фиксированной длины 
+    Представьте, что у вас есть массив чисел [1, 4, 2, 10, 23, 3, 1, 0, 20] 
+    и вам нужно найти максимальную сумму любого подмассива длины 4.
+
+Решение:
+
+Solution: [Task1.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task1.java)
+
+Tests: [Task1Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task1Test.java)
