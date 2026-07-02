@@ -6,30 +6,39 @@ package com.gmail.alexei28.shortcut.algorithms.module3.slidingwindow;
     и вам нужно найти максимальную сумму любого подмассива длины 4.
 
     Решение:
+    Паттерн скользящее окно.
     Каждое следующее окно вычисляется за O(1) — мы просто вычитаем выходящий элемент и прибавляем входящий.
-    Общая сложность O(n).
+    Вычисляем сумму первого окна: 1 + 4 + 2 + 10 = 17
+    Для следующего окна вычитаем 1 (который выходит) и прибавляем 23 (который входит): 17 - 1 + 23 = 39
+    Для следующего окна вычитаем 4 и прибавляем 3: 39 - 4 + 3 = 38
+    ... и так далее
 
     Примечание по сложности:
+    Общая сложность O(n).
     Обновление окна здесь занимает O(1) — одна операция вычитания и одна операция сложения.
     Это идеальный случай для паттерна скользящего окна, где мы можем поддерживать агрегированное значение (сумму) без пересчёта.
 */
 public class Task1 {
 
-    public int maxSumSubArray(int[] array, int subArrayLength) {
-        int max = 0;
-        int startIndex = 0;
-        int endIndex = startIndex + subArrayLength;
-        while (endIndex < array.length) {
-            int sum = 0;
-            for (int index = startIndex; index < endIndex;  index++) {
-                sum = sum + array[index];
-            }
-            if (sum > max) {
-                max = sum;
-            }
-            startIndex++;
-            endIndex = startIndex + subArrayLength;
+    public int maxSumSubArray(int[] nums, int k) {
+        if (nums == null || nums.length < k || k <= 0) {
+            return 0;
         }
-        return max;
+
+        // Сумма первого окна
+        int windowSum = 0;
+        for (int i = 0; i < k; i++) {
+            windowSum += nums[i];
+        }
+
+        int maxSum = windowSum;
+
+        // Сдвигаем окно
+        for (int right = k; right < nums.length; right++) {
+            windowSum = windowSum - nums[right - k] + nums[right];
+            maxSum = Math.max(maxSum, windowSum);
+        }
+
+        return maxSum;
     }
 }
