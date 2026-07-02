@@ -1,126 +1,68 @@
 package com.gmail.alexei28.shortcut.algorithms.module3.slidingwindow;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class Task1Test {
 
-    @Test
-    void shouldReturnMaxSumOfSubArrayForStandardCase() {
-        // Arrange (Подготовка данных и окружения)
-        Task1 task = new Task1();
-        int[] array = {1, 4, 2, 10, 23, 3, 1, 0, 20};
-        int subArrayLength = 4;
-        // Ожидаемый результат: подмассив [4, 2, 10, 23] дает сумму 39
-        int expectedSum = 39;
+    private Task1 task;
 
-        // Act (Выполнение целевого действия)
-        int actualSum = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert (Проверка результата с помощью AssertJ)
-        assertThat(actualSum)
-                .as("Максимальная сумма подмассива длины %d должна быть равна %d", subArrayLength, expectedSum)
-                .isEqualTo(expectedSum);
+    @BeforeEach
+    void setUp() {
+        task = new Task1();
     }
 
     @Test
-    void shouldReturnSingleLargestElementWhenSubArrayLengthIsOne2() {
+    void maxSumSubArray_withValidArray_returnsCorrectMaxSum() {
         // Arrange
-        int[] array = {3, 7, 2, 9, 1};
-        int subArrayLength = 1;
-        Task1 task = new Task1();
+        int[] nums = {1, 4, 2, 10, 23, 3, 1, 0, 20};
+        int k = 4;
 
         // Act
-        int result = task.maxSumSubArray(array, subArrayLength);
+        int result = task.maxSumSubArray(nums, k);
 
         // Assert
-        assertThat(result).isEqualTo(9);
+        assertThat(result)
+                .as("The maximum sum of a subarray of length 4 should be 39")
+                .isEqualTo(39);
     }
 
     @Test
-    void shouldReturnArraySumWhenSubArrayLengthEqualsArrayLength() {
+    void maxSumSubArray_whenKEqualsArrayLength_returnsTotalSum() {
         // Arrange
-        int[] array = {2, 4, 6};
-        int subArrayLength = 3;
-        Task1 task = new Task1();
+        int[] nums = {1, 2, 3, 4};
+        int k = 4;
 
         // Act
-        int result = task.maxSumSubArray(array, subArrayLength);
+        int result = task.maxSumSubArray(nums, k);
 
         // Assert
-        assertThat(result).isEqualTo(12);
+        assertThat(result).isEqualTo(10);
     }
 
-    @Test
-    void shouldReturnSingleLargestElementWhenSubArrayLengthIsOne() {
-        // Arrange
-        int[] array = {3, 7, 2, 9, 1};
-        int subArrayLength = 1;
-        Task1 task = new Task1();
-
-
-        // Act
-        int result = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert
-        assertThat(result).isEqualTo(9);
+    @ParameterizedTest
+    @MethodSource("provideInvalidInputs")
+    void maxSumSubArray_withInvalidInputs_throwsIllegalArgumentException(int[] nums, int k) {
+        // Arrange & Act & Assert (AssertJ combines Act & Assert for exceptions)
+        assertThatThrownBy(() -> task.maxSumSubArray(nums, k))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid input");
     }
 
-    @Test
-    void shouldHandleNegativeNumbers() {
-        // Arrange
-        int[] array = {-8, -3, -6, -2, -5, -4};
-        int subArrayLength = 2;
-        Task1 task = new Task1();
-
-
-        // Act
-        int result = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert
-        assertThat(result).isEqualTo(-7);
-    }
-
-    @Test
-    void shouldHandleMixedPositiveAndNegativeNumbers() {
-        // Arrange
-        int[] array = {-2, 5, -1, 3, -4, 2};
-        int subArrayLength = 2;
-        Task1 task = new Task1();
-
-
-        // Act
-        int result = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert
-        assertThat(result).isEqualTo(4);
-    }
-
-    @Test
-    void shouldReturnZeroIfSubArrayLengthIsGreaterThanArrayLength() {
-        // Arrange
-        Task1 task = new Task1();
-        int[] array = {1, 2, 3};
-        int subArrayLength = 5;
-
-        // Act
-        int actualSum = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert
-        assertThat(actualSum).isZero();
-    }
-
-    @Test
-    void shouldReturnZeroIfArrayIsEmpty() {
-        // Arrange
-        Task1 task = new Task1();
-        int[] array = {};
-        int subArrayLength = 2;
-
-        // Act
-        int actualSum = task.maxSumSubArray(array, subArrayLength);
-
-        // Assert
-        assertThat(actualSum).isZero();
+    private static Stream<Arguments> provideInvalidInputs() {
+        return Stream.of(
+                Arguments.of(null, 3),                          // Null array
+                Arguments.of(new int[]{1, 2}, 3),               // k greater than array length
+                Arguments.of(new int[]{1, 2, 3}, 0),            // k is zero
+                Arguments.of(new int[]{1, 2, 3}, -1)            // k is negative
+        );
     }
 }

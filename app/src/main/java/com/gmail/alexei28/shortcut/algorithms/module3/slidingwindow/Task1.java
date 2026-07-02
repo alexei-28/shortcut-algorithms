@@ -22,7 +22,7 @@ public class Task1 {
 
     public int maxSumSubArray(int[] nums, int k) {
         if (nums == null || nums.length < k || k <= 0) {
-            return 0;
+            throw new IllegalArgumentException("Invalid input");
         }
 
         // Сумма первого окна
