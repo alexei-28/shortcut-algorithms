@@ -90,6 +90,7 @@ Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithm
 Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/twopointers/Task4Test.java)
 
 
+### Скользящее окно (Sliding Window)
 
 ###  Максимальная сумма подмассива фиксированной длины 
     Представьте, что у вас есть массив чисел [1, 4, 2, 10, 23, 3, 1, 0, 20] 
@@ -100,3 +101,18 @@ Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorith
 Solution: [Task1.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task1.java)
 
 Tests: [Task1Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task1Test.java)
+
+
+### 643. Maximum Average Subarray I [Easy]
+
+Source: https://leetcode.com/problems/maximum-average-subarray-i/description/
+
+Maximum Average Subarray of Fixed Size K. 
+Дан массив целых чисел nums и целое число k, найдите непрерывный подмассив длины k с максимальным средним значением.
+Верните это среднее значение.
+
+Решение:
+
+Solution: [Task2.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task2.java)
+
+Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module3/slidingwindow/Task2Test.java)
