@@ -1,5 +1,9 @@
 ## Упражнения к лекции 3: Два указателя и скользящее окно
 
+Все задачи с тегом «Two Pointers» - https://leetcode.com/problem-list/two-pointers/
+
+Все задачи с тегом «Sliding Window» - https://leetcode.com/problem-list/sliding-window/
+
 ### Модуль 3
 - Теория: https://web.shortcut.education/lms/algo/lecture_03/two_pointers_sliding_window/
 - Практика: https://web.shortcut.education/lms/algo/lecture_03/two_pointers_sliding_window_practice/
