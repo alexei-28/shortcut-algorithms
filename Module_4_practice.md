@@ -47,3 +47,10 @@
 Временная сложность: O(n), где n — длина строки
 
 Пространственная сложность: O(n) в худшем случае
+
+
+Решение:
+
+Solution: [Task1.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task1.java)
+
+Tests: [Task1Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task1Test.java)
