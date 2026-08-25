@@ -54,3 +54,36 @@
 Solution: [Task1.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task1.java)
 
 Tests: [Task1Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task1Test.java)
+
+
+#### Задание 2: Number of Recent Calls [Easy]
+Задача встречается на собеседованиях в Яндекс
+
+У вас есть очередь запросов, которые поступают в разные моменты времени. Для каждого запроса t посчитайте количество запросов в интервале [t - 3000, t].
+
+Источник: https://leetcode.com/problems/number-of-recent-calls/
+
+Пример:
+```
+ping(1)     → возвращает 1 (запросы: [1])
+ping(100)   → возвращает 2 (запросы: [1, 100])
+ping(3001)  → возвращает 3 (запросы: [1, 100, 3001])
+ping(3002)  → возвращает 3 (запросы: [100, 3001, 3002])
+```
+
+Требования:
+
+Временная сложность: O(1) (амортизированная) для каждого ping
+
+Используйте очередь для хранения времён запросов
+
+Подсказка:
+Используйте очередь для хранения времён запросов. Для каждого ping добавьте текущее время в очередь и удалите все времена,
+которые меньше t - 3000. Длина очереди будет ответом.
+
+
+Решение:
+
+Solution: [Task2.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task2.java)
+
+Tests: [Task12est.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task2Test.java)
