@@ -86,4 +86,40 @@ ping(3002)  → возвращает 3 (запросы: [100, 3001, 3002])
 
 Solution: [Task2.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task2.java)
 
-Tests: [Task12est.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task2Test.java)
+Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task2Test.java)
+
+
+
+
+#### Задание 3: Backspace String Compare [Easy]
+Пример из лекции: Отмена действий (undo/redo)
+
+Даны две строки, которые содержат символы и символ #, который означает удаление предыдущего символа (backspace).
+Проверьте, равны ли эти две строки после применения всех backspace.
+
+Источник: https://leetcode.com/problems/backspace-string-compare/
+
+Примеры:
+```
+Вход: s = "ab#c", t = "ad#c"
+Выход: true (обе становятся "ac")
+
+Вход: s = "ab##", t = "c#d#"
+Выход: true (обе становятся "")
+
+Вход: s = "a#c", t = "b"
+Выход: false ("c" != "b")
+```
+
+Требования:
+Временная сложность: O(n + m), где n и m — длины строки
+
+Подсказка:
+Используйте стек для обработки каждой строки. При встрече символа # удаляйте верхний элемент стека (если он есть), 
+иначе добавляйте символ в стек.
+
+Решение:
+
+Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3.java)
+
+Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3Test.java)
