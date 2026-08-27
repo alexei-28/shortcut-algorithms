@@ -123,3 +123,37 @@ Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorith
 Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3Test.java)
+
+
+
+#### Задание 4: Evaluate Reverse Polish Notation [Medium]
+
+Пример из лекции: Обратная польская запись Задача встречается на собеседованиях в Яндекс
+
+Вычислите значение выражения в обратной польской записи (RPN).
+
+Операции: +, -, *, /
+
+Источник: LeetCode 150
+
+Примеры:
+
+```
+Вход: ["2","1","+","3","*"]
+Выход: 9 ((2 + 1) * 3)
+
+Вход: ["4","13","5","/","+"]
+
+Выход: 6 (4 + (13 / 5))
+```
+
+Требования:
+
+Временная сложность: O(n)
+Деление между двумя целыми числами должно усекать в сторону нуля
+
+Решение:
+
+Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4.java)
+
+Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4Test.java)
