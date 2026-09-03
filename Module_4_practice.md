@@ -123,3 +123,80 @@ Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorith
 Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3Test.java)
+
+
+
+#### Задание 4: Evaluate Reverse Polish Notation [Medium]
+
+Пример из лекции: Обратная польская запись Задача встречается на собеседованиях в Яндекс
+
+Вычислите значение выражения в обратной польской записи (RPN).
+
+Операции: +, -, *, /
+
+Источник: LeetCode 150
+
+Примеры:
+
+```
+Вход: ["2","1","+","3","*"]
+Выход: 9 ((2 + 1) * 3)
+
+Вход: ["4","13","5","/","+"]
+
+Выход: 6 (4 + (13 / 5))
+```
+
+Требования:
+
+Временная сложность: O(n)
+Деление между двумя целыми числами должно усекать в сторону нуля
+
+Решение:
+
+Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4.java)
+
+Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4Test.java)
+
+
+#### Задание 5: Implement Queue using Stacks [Easy]
+
+Задача встречается на собеседованиях в Яндекс
+
+Реализуйте очередь, используя только два стека.
+
+Операции:
+
+push(x) — добавить элемент в конец очереди
+pop() — удалить элемент из начала очереди
+peek() — получить элемент из начала очереди
+empty() — проверить, пуста ли очередь
+
+Источник: https://leetcode.com/problems/implement-queue-using-stacks/
+
+Пример:
+
+```
+push(1)
+push(2)
+peek()   → возвращает 1
+pop()    → возвращает 1
+empty()  → возвращает false
+```
+
+
+Требования:
+
+Временная сложность: O(1) (амортизированная) для всех операций
+Используйте только операции стека (push, pop, peek, empty)
+
+Подсказка:
+
+Используйте два стека: один для добавления элементов (input stack), другой для удаления (output stack). 
+При pop или peek, если output stack пуст, переместите все элементы из input stack в output stack.
+
+Решение:
+
+Solution: [MyQueue.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueue.java)
+
+Tests: [MyQueueTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueueTest.java)
