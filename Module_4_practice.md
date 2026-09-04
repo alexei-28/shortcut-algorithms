@@ -200,3 +200,43 @@ empty()  → возвращает false
 Solution: [MyQueue.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueue.java)
 
 Tests: [MyQueueTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueueTest.java)
+
+
+### Задание 6: Implement Stack using Queues [Easy]
+Реализуйте стек, используя только одну очередь.
+
+Операции:
+
+push(x) — добавить элемент на вершину стека
+pop() — удалить элемент с вершины стека
+top() — получить элемент с вершины стека
+empty() — проверить, пуст ли стек
+
+Источник https://leetcode.com/problems/implement-stack-using-queues/description/
+
+Пример:
+
+```
+push(1)
+push(2)
+top()    → возвращает 2
+pop()    → возвращает 2
+empty()  → возвращает false
+```
+
+Требования:
+
+Временная сложность зависит от того, какую операцию делать «дорогой». В реализации из подсказки ниже дорогой становится push — O(n), 
+а pop, top и empty — O(1). Есть и зеркальная реализация, где, наоборот, дорогой pop — O(n), а push — O(1).
+В любом случае одна из операций стоит O(n), а остальные — O(1).
+Используйте только операции очереди (push, pop, peek, empty)
+
+Подсказка:
+
+При добавлении элемента в стек, добавьте его в очередь, затем переместите все предыдущие элементы в конец очереди.
+Так последний добавленный элемент будет первым при удалении.
+
+Solution: [MyStack.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MyStack.java)
+
+Tests: [MyStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyStackTest.java)
+

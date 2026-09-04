@@ -1,0 +1,80 @@
+package com.gmail.alexei28.shortcut.algorithms.module4;
+
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
+
+/*
+  225. Implement Stack using Queues [Easy]
+  https://leetcode.com/problems/implement-stack-using-queues/description/
+
+  Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions
+  of a normal stack (push, top, pop, and empty).
+
+  Implement the MyStack class:
+    - void push(int x) Pushes element x to the top of the stack.
+    - int pop() Removes the element on the top of the stack and returns it.
+    - int top() Returns the element on the top of the stack.
+    - boolean empty() Returns true if the stack is empty, false otherwise.
+
+  Notes:
+    You must use only standard operations of a queue, which means that only push to back, peek/pop from front, size and
+    is empty operations are valid.
+    Depending on your language, the queue may not be supported natively. You may simulate a queue using a list or deque
+    (double-ended queue) as long as you use only a queue's standard operations.
+
+  Example 1:
+    Input
+    ["MyStack", "push", "push", "top", "pop", "empty"]
+    [[], [1], [2], [], [], []]
+
+    Output
+    [null, null, null, 2, 2, false]
+
+    Explanation
+    MyStack myStack = new MyStack();
+    myStack.push(1);
+    myStack.push(2);
+    myStack.top(); // return 2
+    myStack.pop(); // return 2
+    myStack.empty(); // return False
+
+    Требования:
+    Временная сложность зависит от того, какую операцию делать «дорогой». В реализации из подсказки ниже дорогой становится push — O(n),
+    а pop, top и empty — O(1). Есть и зеркальная реализация, где, наоборот, дорогой pop — O(n), а push — O(1).
+    В любом случае одна из операций стоит O(n), а остальные — O(1).
+    Используйте только операции очереди (push, pop, peek, empty)
+
+    Подсказка:
+    При добавлении элемента в стек, добавьте его в очередь, затем переместите все предыдущие элементы в конец очереди.
+    Так последний добавленный элемент будет первым при удалении.
+*/
+public class MyStack {
+    private final Queue<Integer> queue;
+
+    public MyStack() {
+        queue = new ArrayDeque<>();
+    }
+
+    public void push(int x) {
+        queue.add(x);
+
+        int size = queue.size();
+        for (int index = 0; index < size - 1; index++) {
+            int head = queue.remove();
+            queue.add(head);
+        }
+    }
+
+    public int pop() {
+        return queue.poll();
+    }
+
+    public int top() {
+        return queue.peek();
+    }
+
+    public boolean empty() {
+        return queue.isEmpty();
+    }
+}
