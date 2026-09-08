@@ -240,3 +240,41 @@ Solution: [MyStack.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorit
 
 Tests: [MyStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyStackTest.java)
 
+
+### Задание 7: Simplify Path [Medium]
+Упростите абсолютный путь файловой системы.
+
+Специальные символы:
+
+. — текущая директория (игнорируем)
+.. — родительская директория (удаляем из стека)
+/ — разделитель директорий
+
+Источник https://leetcode.com/problems/simplify-path/
+
+Примеры:
+
+```
+Вход: "/home/"
+Выход: "/home"
+
+Вход: "/../"
+Выход: "/"
+
+Вход: "/home//foo/"
+Выход: "/home/foo"
+```
+
+Требования:
+
+Временная сложность: O(n), где n — длина пути
+Результирующий путь должен начинаться с /
+
+Подсказка:
+
+Разбейте путь по разделителю / и используйте стек. 
+Добавляйте директории в стек, при встрече .. удаляйте последний элемент из стека (если стек не пустой).
+
+Solution: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7.java)
+
+Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7Test.java)
