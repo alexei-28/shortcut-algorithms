@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Task8Test {
+class MinStackTest {
 
     private Task8 task8;
 

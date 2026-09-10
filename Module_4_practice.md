@@ -278,3 +278,44 @@ Tests: [MyStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algori
 Solution: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7.java)
 
 Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7Test.java)
+
+
+
+### Задание 8: Min Stack [Medium]
+Паттерн: Реализация структур данных
+
+Реализуйте стек, который поддерживает операции push, pop, top и получение минимального элемента за O(1).
+
+Источник: https://leetcode.com/problems/min-stack/
+
+Операции:
+
+push(val) — добавить элемент в стек
+pop() — удалить элемент с вершины
+top() — получить элемент с вершины
+getMin() — получить минимальный элемент в стеке
+
+Пример
+```
+push(-2)
+push(0)
+push(-3)
+getMin()   → возвращает -3
+pop()
+top()      → возвращает 0
+getMin()   → возвращает -2
+```
+
+Требования:
+
+Временная сложность: O(1) для всех операций
+Пространственная сложность: O(n)
+
+Подсказка:
+
+Используйте два стека: один для хранения всех элементов, другой для хранения минимумов. 
+При добавлении элемента также добавляйте текущий минимум во второй стек.
+
+Solution: [MinStack.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MinStack.java)
+
+Tests: [MinStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MinStackTest.java)
