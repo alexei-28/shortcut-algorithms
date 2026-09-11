@@ -123,3 +123,199 @@ Tests: [Task2Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorith
 Solution: [Task3.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3.java)
 
 Tests: [Task3Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task3Test.java)
+
+
+
+#### Задание 4: Evaluate Reverse Polish Notation [Medium]
+
+Пример из лекции: Обратная польская запись Задача встречается на собеседованиях в Яндекс
+
+Вычислите значение выражения в обратной польской записи (RPN).
+
+Операции: +, -, *, /
+
+Источник: LeetCode 150
+
+Примеры:
+
+```
+Вход: ["2","1","+","3","*"]
+Выход: 9 ((2 + 1) * 3)
+
+Вход: ["4","13","5","/","+"]
+
+Выход: 6 (4 + (13 / 5))
+```
+
+Требования:
+
+Временная сложность: O(n)
+Деление между двумя целыми числами должно усекать в сторону нуля
+
+Решение:
+
+Solution: [Task4.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4.java)
+
+Tests: [Task4Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task4Test.java)
+
+
+#### Задание 5: Implement Queue using Stacks [Easy]
+
+Задача встречается на собеседованиях в Яндекс
+
+Реализуйте очередь, используя только два стека.
+
+Операции:
+
+push(x) — добавить элемент в конец очереди
+pop() — удалить элемент из начала очереди
+peek() — получить элемент из начала очереди
+empty() — проверить, пуста ли очередь
+
+Источник: https://leetcode.com/problems/implement-queue-using-stacks/
+
+Пример:
+
+```
+push(1)
+push(2)
+peek()   → возвращает 1
+pop()    → возвращает 1
+empty()  → возвращает false
+```
+
+
+Требования:
+
+Временная сложность: O(1) (амортизированная) для всех операций
+Используйте только операции стека (push, pop, peek, empty)
+
+Подсказка:
+
+Используйте два стека: один для добавления элементов (input stack), другой для удаления (output stack). 
+При pop или peek, если output stack пуст, переместите все элементы из input stack в output stack.
+
+Решение:
+
+Solution: [MyQueue.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueue.java)
+
+Tests: [MyQueueTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyQueueTest.java)
+
+
+### Задание 6: Implement Stack using Queues [Easy]
+Реализуйте стек, используя только одну очередь.
+
+Операции:
+
+push(x) — добавить элемент на вершину стека
+pop() — удалить элемент с вершины стека
+top() — получить элемент с вершины стека
+empty() — проверить, пуст ли стек
+
+Источник https://leetcode.com/problems/implement-stack-using-queues/description/
+
+Пример:
+
+```
+push(1)
+push(2)
+top()    → возвращает 2
+pop()    → возвращает 2
+empty()  → возвращает false
+```
+
+Требования:
+
+Временная сложность зависит от того, какую операцию делать «дорогой». В реализации из подсказки ниже дорогой становится push — O(n), 
+а pop, top и empty — O(1). Есть и зеркальная реализация, где, наоборот, дорогой pop — O(n), а push — O(1).
+В любом случае одна из операций стоит O(n), а остальные — O(1).
+Используйте только операции очереди (push, pop, peek, empty)
+
+Подсказка:
+
+При добавлении элемента в стек, добавьте его в очередь, затем переместите все предыдущие элементы в конец очереди.
+Так последний добавленный элемент будет первым при удалении.
+
+Solution: [MyStack.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MyStack.java)
+
+Tests: [MyStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MyStackTest.java)
+
+
+### Задание 7: Simplify Path [Medium]
+Упростите абсолютный путь файловой системы.
+
+Специальные символы:
+
+. — текущая директория (игнорируем)
+.. — родительская директория (удаляем из стека)
+/ — разделитель директорий
+
+Источник https://leetcode.com/problems/simplify-path/
+
+Примеры:
+
+```
+Вход: "/home/"
+Выход: "/home"
+
+Вход: "/../"
+Выход: "/"
+
+Вход: "/home//foo/"
+Выход: "/home/foo"
+```
+
+Требования:
+
+Временная сложность: O(n), где n — длина пути
+Результирующий путь должен начинаться с /
+
+Подсказка:
+
+Разбейте путь по разделителю / и используйте стек. 
+Добавляйте директории в стек, при встрече .. удаляйте последний элемент из стека (если стек не пустой).
+
+Solution: [Task7.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7.java)
+
+Tests: [Task7Test.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/Task7Test.java)
+
+
+
+### Задание 8: Min Stack [Medium]
+Паттерн: Реализация структур данных
+
+Реализуйте стек, который поддерживает операции push, pop, top и получение минимального элемента за O(1).
+
+Источник: https://leetcode.com/problems/min-stack/
+
+Операции:
+
+push(val) — добавить элемент в стек
+pop() — удалить элемент с вершины
+top() — получить элемент с вершины
+getMin() — получить минимальный элемент в стеке
+
+Пример
+```
+push(-2)
+push(0)
+push(-3)
+getMin()   → возвращает -3
+pop()
+top()      → возвращает 0
+getMin()   → возвращает -2
+```
+
+Требования:
+
+Временная сложность: O(1) для всех операций
+Пространственная сложность: O(n)
+
+Подсказка:
+
+Используйте два стека: один для хранения всех элементов, другой для хранения минимумов. 
+При добавлении элемента также добавляйте текущий минимум во второй стек.
+
+Solution: [MinStack.java](./app/src/main/java/com/gmail/alexei28/shortcut/algorithms/module4/MinStack.java)
+
+Tests: [MinStackTest.java](./app/src/test/java/com/gmail/alexei28/shortcut/algorithms/module4/MinStackTest.java)
