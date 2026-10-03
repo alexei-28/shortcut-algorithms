@@ -1,70 +1,39 @@
 package com.gmail.alexei28.shortcut.algorithms.module5;
 
 /*
-    Only for sorted array.
-    Base implementation of binary search:
-    1. Iterative
-    2. Recursive
+  704. Binary Search
+  https://leetcode.com/problems/binary-search/description/
+  Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums.
+  If target exists, then return its index. Otherwise, return -1.
+  You must write an algorithm with O(log n) runtime complexity.
 
-    1. Классический бинарный поиск:
-        - работает только на отсортированных массивах;
-        - сложность O(log n) — на каждом шаге размер поиска уменьшается вдвое;
-        - базовый шаблон с left, right, mid и корректное вычисление середины в каждом языке.
-    2. Пять основных паттернов:
-        - точный поиск — найти индекс элемента или вернуть -1;
-        - первое/последнее вхождение — найти крайнее вхождение в массиве с дубликатами;
-        - место вставки — найти позицию для вставки элемента с сохранением порядка;
-        - бинарный поиск по ответу — искать значение ответа в диапазоне, а не элемент в массиве;
-        - повёрнутый массив — поиск в массиве, где одна половина всегда отсортирована.
+  Example 1:
+    Input: nums = [-1,0,3,5,9,12], target = 9
+    Output: 4
+    Explanation: 9 exists in nums and its index is 4
+
+  Example 2:
+    Input: nums = [-1,0,3,5,9,12], target = 2
+    Output: -1
+    Explanation: 2 does not exist in nums so return -1
 */
 public class Task1 {
-    /*
-        Base implementation (iterative) of binary search.
-        Найти индекс элемента в отсортированном массиве или вернуть -1
-
-        Сложность:
-        - Временная: O(log n) — на каждом шаге размер поиска уменьшается вдвое
-        - Пространственная: O(1) — используем только несколько переменных
-    */
-    public int binarySearch(int[] arr, int target) {
+    public int search(int[] nums, int target) {
         int left = 0;
-        int right = arr.length - 1;
+        int right = nums.length - 1;
 
         while (left <= right) {
-            // (left + right) / 2 математически это же самое что и left + (right - left) / 2
-            int mid = left + (right - left) / 2;  // Защита от переполнения int
+            int mid = left + (right - left) / 2;
 
-            if (arr[mid] == target) {
-                return mid;  // Найдено
-            } else if (arr[mid] < target) {
-                left = mid + 1;  // Ищем в правой половине
-            } else {
-                right = mid - 1;  // Ищем в левой половине
+            if (nums[mid] == target) {
+                return mid;
+            }
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
             }
         }
-
-        return -1;  // Не найдено
-    }
-
-    /*
-        Recursive implementation of binary search.
-        Найти индекс элемента в отсортированном массиве или вернуть -1
-        Отличия от итеративной версии:
-        - Пространственная сложность: O(log n) из-за стека вызовов (в итеративной версии O(1))
-        - Читаемость: некоторым рекурсивная версия кажется более естественной
-        - Практичность: для собеседований предпочтительнее итеративная версия — она эффективнее и проще отлаживать
-    */
-    public int binarySearchRecursive(int[] arr, int target, int left, int right) {
-        if (left > right) {
-            return -1;
-        }
-        int mid = left + (right - left) / 2;  // Защита от переполнения int
-        if (arr[mid] == target) {
-            return mid;
-        } else if (arr[mid] < target) {
-            return binarySearchRecursive(arr, target, mid + 1, right);
-        } else {
-            return binarySearchRecursive(arr, target, left, mid - 1);
-        }
+        return -1;
     }
 }
