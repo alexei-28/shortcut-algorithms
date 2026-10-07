@@ -1,7 +1,11 @@
 package com.gmail.alexei28.shortcut.algorithms.module5;
 
 public class GuessGame {
-    int pick = 10;
+    private final int pick;
+
+    public GuessGame(int pick) {
+        this.pick = pick;
+    }
 
     /**
      * Forward declaration of guess API.

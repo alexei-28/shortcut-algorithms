@@ -30,6 +30,11 @@ package com.gmail.alexei28.shortcut.algorithms.module5;
     Пространственная сложность: O(1)
 */
 public class Task4 extends GuessGame {
+
+    public Task4(int pick) {
+        super(pick);
+    }
+
     /**
      * Forward declaration of guess API.
      *
@@ -58,7 +63,7 @@ public class Task4 extends GuessGame {
     }
 
     public static void main(String[] args) {
-        Task4 task4 = new Task4();
+        Task4 task4 = new Task4(6);
         int result = task4.guessNumber(10);
         System.out.println("result = " + result);
     }
