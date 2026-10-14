@@ -6,11 +6,10 @@
 - Ответы к упражнениям модуля 2: Базовые структуры данных: https://shortcut.education/page121416336.html
 
 ### Полезные ресурсы
-все задачи с тегом «Array» - https://leetcode.com/problem-list/array/
-
-все задачи с тегом «String» - https://leetcode.com/problem-list/string/
-
-все задачи с тегом «Linked List» - https://leetcode.com/tag/linked-list/
+LeetCode:
+- все задачи с тегом «Array» - https://leetcode.com/problem-list/array/
+- все задачи с тегом «String» - https://leetcode.com/problem-list/string/
+- все задачи с тегом «Linked List» - https://leetcode.com/tag/linked-list/
 
 
 ### Уровень 1: Основы

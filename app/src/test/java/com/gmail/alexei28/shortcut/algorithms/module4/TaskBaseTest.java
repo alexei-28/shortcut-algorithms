@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Task1Test {
+class TaskBaseTest {
 
     private Task1 task1;
 
