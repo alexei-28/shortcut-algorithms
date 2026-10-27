@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Task1Test {
+class TaskBaseTest {
 
     private final Task1 task = new Task1();
 

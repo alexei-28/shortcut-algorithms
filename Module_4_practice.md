@@ -4,6 +4,10 @@
 - Теория: https://web.shortcut.education/lms/algo/basics/lecture_04/stack_and_queue/
 - Практика: https://web.shortcut.education/lms/algo/basics/lecture_04/stack_and_queue_practice/
 
+- все задачи с тегом «Stack» - https://leetcode.com/problem-list/stack/
+- все задачи с тегом «Queue» - https://leetcode.com/problem-list/queue/
+- видеоразборы классических задач - https://neetcode.io/
+
 Упражнения к лекции 4: Стек и очередь
 
 
