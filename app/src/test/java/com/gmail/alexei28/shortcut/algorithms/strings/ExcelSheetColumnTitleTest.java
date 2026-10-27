@@ -1,5 +1,6 @@
 package com.gmail.alexei28.shortcut.algorithms.strings;
 
+import com.gmail.alexei28.shortcut.algorithms.basic_structures.strings.ExcelSheetColumnTitle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
