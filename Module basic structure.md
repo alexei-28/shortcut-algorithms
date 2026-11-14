@@ -9,7 +9,9 @@
 LeetCode:
 - все задачи с тегом «Array» - https://leetcode.com/problem-list/array/
 - все задачи с тегом «String» - https://leetcode.com/problem-list/string/
-- все задачи с тегом «Linked List» - https://leetcode.com/tag/linked-list/
+- все задачи с тегом «Linked List» 
+  https://leetcode.com/tag/linked-list/
+  https://www.youtube.com/watch?v=4QttxAogoWM
 
 
 ### Уровень 1: Основы
